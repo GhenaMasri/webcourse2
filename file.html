@@ -87,12 +87,12 @@
 </head>
 <body>
     <header>
-        <p><h1 class="h1-style1">This is a recipe of Pizza</h1></p>
+        <p id="p1"><h1 class="h1-style1">This is a recipe of Pizza</h1></p>
     </header>
     <img src="C:\Users\Google Tech\Desktop\test\html.pizza.jpg" alt="pizza" width="300" height="300">
     <main>
         <section>
-            <p><h1 class="h3-style1">-For the Pizza dough you need:</h1> </p>
+            <p><h1 id="h1">-For the Pizza dough you need:</h1> </p>
         </section>
         <section>
             <h3 class="h3-style2">-First you need to melt the yeast in  warm water</h3>
@@ -146,13 +146,26 @@
                 <section>
                     <p><h1>-Preparation time</h1></p>
                     <h3>.Toatal: Approximately 1 and a half hour</h3>
+                    <button onclick="helloFunction()">Click here</button>
+                    <p id="text"></p>
                 </section>
 
     </main>
     <footer></footer>
+    <script>
+        var h1element = document.querySelector('h1')
+        h1element.innerHTML = "Modify the text using Javascript"
+        var p1 = document.getElementById('p1')
+        p1.innerHTML = "Paragraph 1 changed using JS"
+
+        function helloFunction() {
+            var textVar = document.getElementById('text')
+            textVar.innerHTML = "button klicked! Hello"
+        }
+    </script>
 </body>
 
-
+   
 
 
 

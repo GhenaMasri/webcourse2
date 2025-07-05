@@ -31,5 +31,18 @@ margin-left: 20px;
         </section>
         <section>
 <h3 class="h3-style">Some links</h3> <a href="https://www.albawratalakademia.com"> Visit us!</a>
+<button onclick="helloFunction()">Click here</button>
+<p id="text"></p>
         </section>
+        <script>
+ var h1element = document.querySelector('h1')
+        h1element.innerHTML = "Modify the text using Javascript"
+        var p1 = document.getElementById('p1')
+        p1.innerHTML = "Paragraph 1 changed using JS"
+
+        function helloFunction() {
+            var textVar = document.getElementById('text')
+            textVar.innerHTML = "button klicked! Hello"
+        }
+        </script>
     </body>
